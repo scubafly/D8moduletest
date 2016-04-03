@@ -1,0 +1,7 @@
+lg_base.admin:
+  title: 'LG base module settings'
+  description: 'Basic module with admin path.'
+  parent: system.admin_config_development
+  route_name: lg_base.content
+  weight: 100
+

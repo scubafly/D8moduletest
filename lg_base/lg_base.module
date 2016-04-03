@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * The hooks implementations of the lg_base module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function lg_base_theme() {
+  $return = array();
+
+  return array(
+    'image_linked_formatter' => array(
+      'variables' => array(
+        'item' => NULL,
+        'item_attributes' => NULL,
+        'url' => NULL,
+        'image_style' => NULL,
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements template_preprocess_image_linked_formatter().
+ */
+function template_preprocess_image_linked_formatter(&$vars) {
+  template_preprocess_image_formatter($vars);
+  $vars['caption'] = $vars['item']->get('title')->getValue();
+}

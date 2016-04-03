@@ -1,0 +1,7 @@
+lg_base.content:
+  path: '/test'
+  defaults:
+    _controller: 'Drupal\lg_base\Controller\LgBaseController::content'
+    _title: 'Hello world'
+  requirements:
+   _permission: 'access content'
